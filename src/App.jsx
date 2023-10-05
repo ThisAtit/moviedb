@@ -3,7 +3,7 @@ import "./app.scss";
 
 // General 
 import Layout from "./components/layout/Layout";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 
 // Page
 import MovieDetails from "./components/movieDetails/MovieDetails";
@@ -16,7 +16,7 @@ import PersonDetails from "./components/personDetails/PersonDetails";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="*" element={<>HTTP 404 - The Page you wew looking does not exist</>}/>
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
